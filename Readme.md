@@ -1,31 +1,68 @@
+# 当前项目版本为: v1.0.3
+**该项目仅供个人学习，请勿用于非法用途**
+
+# 使用
+    
+    双击Main/Auto.bat即可使用
+
+**为了便捷使用，可将创建该批处理快捷方式到桌面**
+   
+   
+---
+**注：**
+记得shadowsocks.exe要启动系统代理
+
+![启动系统代理](1.png)
+
+---
+
+# 使用注意:
+
+ - 仅适用windows环境
+
+ - 代码适用需要配置python3.0以上的版本, [python下载地址](https://www.python.org/downloads/windows/)
+
+ - python需要用到requests模块
+
+     - 下载requests模块的方法如下:
+     
+在cmd输入以下即可:
+         
+> pip install requests
+        
+
+# 版本介绍
+*本项目的版本, 第一个数字代表版本号，最后一个数字表示该版本的功能*
+*比如v1.0.2表示使用2号功能的第一代版本*
+
+**注:**
+
+- 功能指如何运行该脚本
+- 1号功能的批处理可以切换服务器**（推荐！！）**
+
+- 2号功能的批处理为将脚本加入计划任务，使之每六小时自动重启脚本（实际服务器重启后还需要较长时间才能正常使用）
+
+- 3号功能的批处理为直接运行脚本
+
+### 当前可选择的版本
+- v1.0.1
+- v1.0.2
+- v1.0.3
+
+---
+
 # 实现原因:
 **因为[http://ss.ishadowx.com/](http://ss.ishadowx.com/)上的密码每6小时会更换(0点, 6点, 12点, 18点)并重启服务器,导致每次都要重新打开网页去找密码,所以做了以下程序,每次只需启动程序就会重新获取密码,并会自动打开shadowsocks,方便了使用**  
 
-**从而实现需要科学上网时, 运行该项目代码即可科学上网**   
+**从而实现需要科学上网时, 运行该项目代码即可科学上网** 
 
-    
-# 使用及注意:
-
- - 仅适用windows环境
- - 代码适用需要配置python3.0以上的版本, [python下载地址](https://www.python.org/downloads/windows/)
- - python需要用到requests模块
-     - 下载requests模块的方法如下:
-         - 在cmd输入即可:
-         
-            > pip install requests
-        
-
- - **需要下载shadowsocks客户端, github中给出, download项目即可获得**
-    - 或者到  **[https://github.com/shadowsocks/shadowsocks-windows/releases](https://github.com/shadowsocks/shadowsocks-windows/releases)获取**  
-    
- - **使用时, 记得设置好代码的ssPath, ssConfigPath的路径(见shadowsocks.py)**
-
+---
 
 # 实现代码:
 
  - 代码分两部分: 
      - 第一部分api_shadowsocks.py为设计的api接口类
-     - 第二部分shadowsocks.py是使用举例
+     - 第二部分shadowsocks.py是使用实例
      
  - api_shadowsocks
      - 主要函数 setShadowSocks(self, pattern):
@@ -44,22 +81,7 @@
 
 ![启动系统代理](1.png)
 
-# 使用批处理:
-
-**本次提供了两种使用shadowsocks.py的方式:**
-
-* Auto.bat:直接运行shadowsocks.py，注意Auto.bat路径更改后要修改相应的路径位置(见代码注释)
-        （当网站密码可能在使用期间更改，当访问失效时，重新运行bat程序即可）  
-
-* Auto_update.bat：增加加入计划任务的功能，令其在0,6,12,18,24点重新启动程序来重新获取密码   
-    
-*注意，Auto.bat以及Auto_update.bat是为了方便打开程序才提供的，如果不想修改其中路径问题，直接创建快捷方式放到桌面即可*
-
-O(∩_∩)O妈妈再也不怕我掉线了    (路径问题见代码)
 
 
 
-# 不使用该项目的科学上网方法:
-*   直接download项目中的shadowsocks
-*   然后打开ishadow的网址: [http://ss.ishadowx.com/](http://ss.ishadowx.com/)
-*   找到密码和服务器，更改到shadowsocks中，并启用服务代理即可
+

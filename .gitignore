@@ -3,3 +3,4 @@ __pycache__/api_shadowsocks.cpython-36.pyc
 Shadowsocks/ss_win_temp/*
 Shadowsocks/gui-config.json
 Shadowsocks/user-wininet.json
+*.pyc

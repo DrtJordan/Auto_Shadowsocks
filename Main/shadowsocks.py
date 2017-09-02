@@ -1,10 +1,10 @@
 from api_shadowsocks import *
 
 # 更改为你的ss程序路径
-ssPath = "Shadowsocks\Shadowsocks.exe"  # 当前是相对路径
+ssPath = "..\Shadowsocks\Shadowsocks.exe"  # 当前是相对路径
 
 # 更换为你的ss配置文件路径
-ssConfigPath = "Shadowsocks\gui-config.json" # 当前是相对路径
+ssConfigPath = "..\Shadowsocks\gui-config.json" # 当前是相对路径
 
 if __name__ == '__main__':
     shadowsocks = ShadowSocks(ssPath=ssPath, ssConfigPath=ssConfigPath)
